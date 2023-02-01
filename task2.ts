@@ -1,7 +1,8 @@
 // There is a union (union) of order types in different states
 // You need to replace FIXME with a type that will get all possible states from Order (state)
 
-// type FIXME = any
+type FIXME = NonNullable<string>
+
 
 enum OrderState {
     State1 = 'initial',
@@ -43,4 +44,4 @@ type Order =
     fullfillmentDate: Date
 }
 
-export const getOrderState = (order: Order): OrderState => order.state;
+export const getOrderState = (order: Order): FIXME => order.state;
