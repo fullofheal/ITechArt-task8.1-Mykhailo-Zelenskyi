@@ -1,12 +1,10 @@
-// NOT FINISHED YET
-// type FIXME = any
+type FIXME = 'initial' | 'inWork' | 'fullfilled'
 
 type OrderState = 'initial' | 'inWork' | 'buyingSupplies' | 'producing' | 'fullfilled'
 
-// type FilteredStates = 'initial' | 'inWork' | 'fullfilled'
 
-function filteredStates(state: string): state is ('initial' | 'inWork' | 'fullfilled') {
-    return typeof state === "string";
+function filteredStates(state: string): state is FIXME {
+    return state !== 'buyingSupplies' && state !== 'producing';
 }
 
 // Hint: with type guards return type can be removed
